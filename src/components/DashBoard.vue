@@ -1,7 +1,16 @@
-<script setup lang="js"></script>
+<script setup lang="js">
+import { ref } from 'vue';
+import ApiService from '../api.service';
+import Inspections from './Inspections.vue';
+
+let inspections = ref([]);
+ApiService.getAllDoneInspections()
+.then(data => inspections.value = data);
+</script>
 
 <template>
     <section id="center">
+        <Inspections :inspections=inspections state="done"/>
     </section>
     <v-container>
         <v-row class="ga-3">
