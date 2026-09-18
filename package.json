@@ -5,13 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "json-server:start":"npx json-server inspections.json",
+    "json-server:start": "npx json-server inspections.json",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "axios":"1.20.0",
+    "pinia":"4.0.3",
     "vue": "^3.5.40",
+    "vue-router": "^4.6.4",
     "vuetify": "^4.1.11"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import App from './App.vue'
 import './assets/base.css'
 //hier nog de huisstyle css importeren
 import '@mdi/font/css/materialdesignicons.css'
@@ -7,12 +8,19 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import router from './router'
+import { createPinia } from 'pinia'
+
+const pinia = createPinia();
 
 const vuetify = createVuetify({
     components,
     directives
 })
 
-import App from './App.vue'
 
-createApp(App).use(vuetify).mount('#app')
+createApp(App)
+    .use(pinia)
+    .use(vuetify)
+    .use(router)
+    .mount('#app')

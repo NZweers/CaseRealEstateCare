@@ -4,197 +4,59 @@
             "id": 1,
             "date": "2026-01-01",
             "state": "done",
-            "damage": {
-                "location": "",
-                "new_damage": false,
-                "damage_type": "moedwillig",
-                "date": "2026-01-01",
-                "immediate_action": false,
-                "destricption": ""
-            },
-            
-        
-            "maintenance": {
-                "location": "",
-                "maintenance_type": "houtrot",
-                "immediate_action": false,
-                "cost_indication": "1"
-            },
-
-            "inspection": {
-                "location": "",
-                "installation_type": "Koeling",
-                "reported_failures": "",
-                "testprotocol": "http://",
-                "accepted": false,
-                "destricption": ""
-            },
-
-            "modification": {
-                "current_situation": "",
-                "location": "",
-                "executed_by": "",
-                "destricption_modification": "",
-                "action": "1",
-                "destricption": ""
-            }
+            "location": "",
+            "installation_type": "Koeling",
+            "reported_failures": "",
+            "testprotocol": "http://",
+            "accepted": false,
+            "description": ""
         },
         {
-
             "id": 2,
-            "date": "2026-02-01",
+            "date": "2026-01-02",
             "state": "done",
-            "damage": {
-                "location": "",
-                "new_damage": false,
-                "damage_type": "",
-                "date": "",
-                "immediate_action": false,
-                "destricption": ""
-            },
-            
-        
-            "maintenance": {
-                "location": "",
-                "maintenance_type": "",
-                "immediate_action": false,
-                "cost_indication": "1"
-            },
-
-            "inspection": {
-                "location": "In de stookruimte",
-                "installation_type": "Koeling",
-                "reported_failures": "Koelt niet meer",
-                "testprotocol": "http://",
-                "accepted": true,
-                "destricption": "Nieuwe thermostaat nodig"
-            },
-
-            "modification": {
-                "current_situation": "http://",
-                "location": "",
-                "executed_by": "me",
-                "destricption_modification": "",
-                "action": "1",
-                "destricption": ""}
+            "location": "In de stookruimte",
+            "installation_type": "Koeling",
+            "reported_failures": "Koelt niet meer",
+            "testprotocol": "http://",
+            "accepted": true,
+            "description": "Nieuwe thermostaat nodig"
         },
         {
-
             "id": 3,
-            "date": "2026-03-01",
-            "state": "done",
-            "damage": {
-                "location": "",
-                "new_damage": false,
-                "damage_type": "",
-                "date": "",
-                "immediate_action": false,
-                "destricption": ""
-            },
-            
-        
-            "maintenance": {
-                "location": "",
-                "maintenance_type": "",
-                "immediate_action": false,
-                "cost_indication": "1"
-            },
-
-            "inspection": {
-                "location": "woonkamer",
-                "installation_type": "Openhaard",
-                "reported_failures": "verstopt",
-                "testprotocol": "http://",
-                "accepted": false,
-                "destricption": "Team laten komen"
-            },
-
-            "modification": {
-                "current_situation": "",
-                "location": "",
-                "executed_by": "me",
-                "destricption_modification": "",
-                "action": "1",
-                "destricption": ""}
+            "date": "2026-01-03",
+            "state": "open",
+            "location": "woonkamer",
+            "installation_type": "Openhaard",
+            "reported_failures": "verstopt",
+            "testprotocol": "http://",
+            "accepted": false,
+            "description": "Team laten komen"
         },
         {
-
             "id": 4,
-            "date": "2026-04-01",
+            "date": "2026-01-04",
             "state": "done",
-            "damage": {
-                "location": "",
-                "new_damage": false,
-                "damage_type": "",
-                "date": "",
-                "immediate_action": false,
-                "destricption": ""
-            },
-            
-        
-            "maintenance": {
-                "location": "",
-                "maintenance_type": "",
-                "immediate_action": false,
-                "cost_indication": "1"
-            },
-
-            "inspection": {
-                "location": "Badkamer",
-                "installation_type": "Douche",
-                "reported_failures": "Kraan lekt",
-                "testprotocol": "http://",
-                "accepted": false,
-                "destricption": "Monteur laten komen kijken"
-            },
-
-            "modification": {
-                "current_situation": "http://",
-                "location": "",
-                "executed_by": "me",
-                "destricption_modification": "",
-                "action": "1",
-                "destricption": ""}
+            "location": "Badkamer",
+            "installation_type": "Douche",
+            "reported_failures": "Kraan lekt",
+            "testprotocol": "http://",
+            "accepted": false,
+            "description": "Monteur laten komen kijken"
         },
         {
-
             "id": 5,
-            "date": "2026-05-01",
-            "state": "done",
-            "damage": {
-                "location": "",
-                "new_damage": false,
-                "damage_type": "",
-                "date": "",
-                "immediate_action": false,
-                "destricption": ""
-            },
-            
-        
-            "maintenance": {
-                "location": "",
-                "maintenance_type": "",
-                "immediate_action": false,
-                "cost_indication": "1"
-            },
-
-            "inspection": {
-                "location": "Keuken",
-                "installation_type": "kraan",
-                "reported_failures": "waterschade",
-                "testprotocol": "http://",
-                "accepted": false,
-                "destricption": "Loodgieter nodig"
-            },
-
-            "modification": {
-                "current_situation": "http://",
-                "location": "",
-                "executed_by": "me",
-                "destricption_modification": "",
-                "action": "1",
-                "destricption": ""}
+            "date": "2026-01-05",
+            "state": "open",
+            "location": "Keuken",
+            "installation_type": "kraan",
+            "reported_failures": "waterschade",
+            "testprotocol": "http://",
+            "accepted": false,
+            "description": "Loodgieter nodig"
         }
-       
-    ]
+    ],
+    "maintenances": [],
+    "damages": [],
+    "modifications": []
 }
