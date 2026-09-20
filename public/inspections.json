@@ -1,8 +1,8 @@
 {
     "inspections": [
         {
-            "id": 1,
-            "date": "2026-01-01",
+            "id": "1",
+            "date": "2026-01-08",
             "state": "done",
             "location": "",
             "installation_type": "Koeling",
@@ -12,8 +12,8 @@
             "description": ""
         },
         {
-            "id": 2,
-            "date": "2026-01-02",
+            "id": "2",
+            "date": "2026-01-06",
             "state": "done",
             "location": "In de stookruimte",
             "installation_type": "Koeling",
@@ -23,7 +23,7 @@
             "description": "Nieuwe thermostaat nodig"
         },
         {
-            "id": 3,
+            "id": "3",
             "date": "2026-01-03",
             "state": "open",
             "location": "woonkamer",
@@ -34,8 +34,8 @@
             "description": "Team laten komen"
         },
         {
-            "id": 4,
-            "date": "2026-01-04",
+            "id": "4",
+            "date": "2026-01-09",
             "state": "done",
             "location": "Badkamer",
             "installation_type": "Douche",
@@ -45,11 +45,11 @@
             "description": "Monteur laten komen kijken"
         },
         {
-            "id": 5,
+            "id": "5",
             "date": "2026-01-05",
             "state": "open",
             "location": "Keuken",
-            "installation_type": "kraan",
+            "installation_type": "Kraan",
             "reported_failures": "waterschade",
             "testprotocol": "http://",
             "accepted": false,

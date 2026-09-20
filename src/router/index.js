@@ -4,6 +4,7 @@ import Inspections from '@/components/Inspections.vue';
 import Login from '../components/Login.vue';
 import Knowledge from '@/components/Knowledge.vue';
 import Settings from '@/components/Settings.vue';
+import Inspection from '@/components/Inspection.vue';
 
 const routes = [
     //alle routes komen hier
@@ -21,6 +22,11 @@ const routes = [
         path: '/inspections/:state',
         name: 'inspections',
         component: Inspections
+    },
+    {
+        path: '/inspection/:id',
+        name: 'inspection',
+        component: Inspection
     },
     {
         path: '/knowledge',
