@@ -11,6 +11,14 @@ export const inspectionsStore = defineStore('inspections', {
         inspections: [],
         inspection: {}
     }),
+    getters: {
+        getNumberOpenInspections(){
+            return 2;
+        },
+        getNumberDoneInspections(){
+            return 3;
+        }
+    },
     actions: {
         loadAllInspections: async (state) => {
             // console.log("State: "+state);

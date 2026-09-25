@@ -1,5 +1,5 @@
 <script setup lang="js">
-
+import { inspectionsStore } from '@/stores/InspectionsStore';
 </script>
 
 <template>
@@ -7,13 +7,13 @@
         <v-row class="ga-3">
             <v-col class="w-50">
                 <v-card to="/inspections/open"><template v-slot:text>
-                        <v-icon size="128">mdi-bookmark-outline</v-icon><br>
+                        <v-badge location="top right" color="primary" :content="inspectionsStore().getNumberOpenInspections"><v-icon size="128">mdi-bookmark-outline</v-icon></v-badge><br>
                         Scheduled
                     </template></v-card>
             </v-col>
             <v-col class="w-50">
                 <v-card to="/inspections/done"><template v-slot:text>
-                        <v-icon size="128">mdi-check-circle</v-icon><br>
+                        <v-badge location="top right" color="primary" :content="inspectionsStore().getNumberDoneInspections"><v-icon size="128">mdi-check-circle</v-icon></v-badge><br>
                         Complete
                     </template></v-card>
             </v-col>
