@@ -8,7 +8,7 @@ const myLoginStore = loginStore();
 
 myLoginStore.init();
 if (!loginStore().isAuthenticated) {
-  useRouter().replace({name: "login"})
+  useRouter().replace({ name: "login" })
 }
 </script>
 

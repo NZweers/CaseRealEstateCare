@@ -1,13 +1,13 @@
-import {Inspection} from "../src/models/Inspection.js";
+import { Inspection } from "../src/models/Inspection.js";
 
 const baseUrl = "http://localhost:3000/";
 
 const ApiService = {
 
     getAllDoneInspections: async (state) => {
-        const url = baseUrl+'inspections';
+        const url = baseUrl + 'inspections';
         //console.log(url);
-        try{
+        try {
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {
@@ -16,12 +16,12 @@ const ApiService = {
             });
             const data = await response.json();
             return data
-            .filter(inspection => inspection.state === state.value)
-            .map(inspection => new Inspection(inspection));
-        } catch (error){
+                .filter(inspection => inspection.state === state.value)
+                .map(inspection => new Inspection(inspection));
+        } catch (error) {
             return console.log('Looks like there was a problem: \n', error);
         }
-        
+
     }
 }
 

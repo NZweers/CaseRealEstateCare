@@ -7,22 +7,22 @@ import { ref } from 'vue';
 const router = useRouter()
 const myLoginStore = loginStore();
 
-if (myLoginStore.isAuthenticated){
-    router.replace({name: "home"})
+if (myLoginStore.isAuthenticated) {
+    router.replace({ name: "home" })
 }
 
 const username = ref("");
 const password = ref("");
 const verifyCode = ref("");
 
-function login(){
+function login() {
     myLoginStore.login(username, password);
 }
 
-function verify(){
+function verify() {
     myLoginStore.verify(verifyCode);
-    console.log("verify", verifyCode);
-    router.replace({name: "home"});
+    // console.log("verify", verifyCode);
+    router.replace({ name: "home" });
 }
 </script>
 <template>
@@ -32,9 +32,9 @@ function verify(){
         <v-card-text>
             <v-form ref="v-form " @submit.prevent="login()">
                 <v-text-field v-model="username" name="username" label="Username" type="text" placeholder="username"
-                required></v-text-field>
+                    required></v-text-field>
                 <v-text-field v-model="password" name="password" label="Password" type="password" placeholder="password"
-                required></v-text-field>
+                    required></v-text-field>
                 <v-btn type="submit" class="mt-4" color="primary" value="log in">Login</v-btn>
             </v-form>
         </v-card-text>
@@ -44,11 +44,11 @@ function verify(){
         <v-card-title>Two-factor Authentication</v-card-title>
         <v-card-text>
             <v-form ref="v-form " @submit.prevent="verify()">
-            <p>Open your authentication app and enter the code for Real Estate Care</p>
-            <v-text-field v-model="verifyCode" name="verifyCode" label="Verify code" type="text" placeholder="Enter 6 digits code"
-            required></v-text-field>
-            <v-btn type="submit" class="mt-4" color="primary" value="verify">Verify</v-btn>
-            </v-form>    
+                <p>Open your authentication app and enter the code for Real Estate Care</p>
+                <v-text-field v-model="verifyCode" name="verifyCode" label="Verify code" type="text"
+                    placeholder="Enter 6 digits code" required></v-text-field>
+                <v-btn type="submit" class="mt-4" color="primary" value="verify">Verify</v-btn>
+            </v-form>
         </v-card-text>
     </v-card>
 </template>

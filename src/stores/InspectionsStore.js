@@ -11,27 +11,27 @@ export const inspectionsStore = defineStore('inspections', {
         inspections: [],
         inspection: {}
     }),
-    actions:{
+    actions: {
         loadAllInspections: async (state) => {
             // console.log("State: "+state);
 
-            try{
+            try {
                 const response = await axios.get(url);
                 const data = await response.data.inspections;
                 inspectionsStore().inspections = data
-                .filter(inspection => inspection.state === state)
-                // .sort((a,b) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0))
-                .sort((a,b) => {
-                    if(a.date > b.date){
-                        return 1;
-                    }else if ( b.date > a.date){
-                        return -1;
-                    }else {
-                        return 0;
-                    }
-                })
-                .map(inspection => new Inspection(inspection));
-            } catch (error){
+                    .filter(inspection => inspection.state === state)
+                    // .sort((a,b) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0))
+                    .sort((a, b) => {
+                        if (a.date > b.date) {
+                            return 1;
+                        } else if (b.date > a.date) {
+                            return -1;
+                        } else {
+                            return 0;
+                        }
+                    })
+                    .map(inspection => new Inspection(inspection));
+            } catch (error) {
                 console.log('Looks like there was a problem: \n', error);
                 inspectionsStore().inspections = [];
             }
@@ -43,9 +43,9 @@ export const inspectionsStore = defineStore('inspections', {
                 const data = await response.data.inspections;
 
                 const inspection = data
-                .filter(inspection => inspection.id === id)
-                .map(inspection => new Inspection(inspection))
-                .shift();
+                    .filter(inspection => inspection.id === id)
+                    .map(inspection => new Inspection(inspection))
+                    .shift();
                 // console.log("inspection: "+ inspection);
                 inspectionsStore().inspection = inspection;
             } catch (error) {

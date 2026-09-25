@@ -7,27 +7,27 @@ export const loginStore = defineStore('login', {
         userKey: "",
     }),
     getters: {
-        loggedIn(){
+        loggedIn() {
             return !!this.username;
         },
-        isAuthenticated(){
+        isAuthenticated() {
             return !!this.userKey;
         }
     },
-    actions:{
-        login(username, password){
+    actions: {
+        login(username, password) {
             this.username = username;
             localStorage.setItem("userName", username);
         },
-        verify(userKey){
+        verify(userKey) {
             this.userKey = userKey;
             localStorage.setItem("userKey", userKey)
         },
-        init(){
-            if(localStorage.getItem("userName")) {
+        init() {
+            if (localStorage.getItem("userName")) {
                 this.username = localStorage.getItem("userName");
             }
-            if (localStorage.getItem("userKey")){
+            if (localStorage.getItem("userKey")) {
                 this.userKey = localStorage.getItem("userKey");
             }
         }

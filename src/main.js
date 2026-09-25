@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './assets/base.css'
-//hier nog de huisstyle css importeren
 import '@mdi/font/css/materialdesignicons.css'
 
 import 'vuetify/styles'

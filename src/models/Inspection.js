@@ -1,5 +1,5 @@
 export class Inspection {
-    constructor(inspectionObject){
+    constructor(inspectionObject) {
         this.id = inspectionObject.id;
         this.date = inspectionObject.date;
         this.state - inspectionObject.state;
@@ -11,4 +11,3 @@ export class Inspection {
         this.description = inspectionObject.description;
     }
 }
-
